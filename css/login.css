@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+    instagram unvisited status border colors
+        #FCD0B3
+        #D7408F
+
+    instagram body background color
+        #FAFAFA
+
+    instagram default border color
+        #DCDCDC
+
+    instagram bold font color
+        #3A3A3A
+
+    instagram links color
+        #0D9AF6
+
+
+*/
+body {
+    height: 100vh;
+    background: #FAFAFA;
+    width: 100vw;
+    overflow-x: hidden;
+}
+/*      **Login Page**      */
+a {
+    text-decoration: none;
+}
+
+.login-main {
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    justify-content: space-around;
+    max-width: calc(100vw - 50%);
+    
+}
+
+.login-main .photo-div {
+    display: grid;
+
+}
+
+.photo-div img {
+    /*grid-row: 1/1;
+    grid-column: 1/1;*/    
+}
+
+.login-main .form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin-top: 28px;
+}
+
+.form-div form {
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #DCDCDC;
+    padding-bottom: 50px;
+
+}
+
+form img {
+    margin-top: 30px;
+    width: 150px;
+}
+
+form input[type="text"], form input[type="password"] {
+    width: 85%;
+    height: 40px;
+    background: #FAFAFA;
+    border: 1px solid #DCDCDC;
+    margin: 5px 0px;
+    outline: none;
+    border-radius: 4px;
+    padding-left: 16px;
+}
+
+form input[type="submit"] {
+    background: #0D9AF6;
+    outline: none;
+    border: 1px solid #DCDCDC;
+    width: 85%;
+    height: 35px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+form .fb-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    color: blue;
+}
+
+
+.form-div .signup-suggestion {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    background: #ffff;
+    border: 1px solid #DCDCDC;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.form-div .downloadapp-suggestion {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.downloadapp-suggestion img {
+    width: 45%;
+    cursor: pointer;
+}

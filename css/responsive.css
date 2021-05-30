@@ -1,0 +1,46 @@
+/*Media query For mobile devices*/
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+	/*Home Page*/
+	body {
+		overflow-x: hidden;
+	}
+
+	header {
+		display: flex;
+		/*justify-content: space-between;*/
+		align-items: center;
+	}
+
+	header .site-logo img {
+		float: left;
+		transform: translateX(-5px);
+		width: 100%;
+	}
+
+	header .search {
+		display: none;
+	}
+
+	main .posts-div {
+		margin-left: 0;
+		width: 100%;
+	}
+
+	main .right-sidebar {
+		display: none;
+	}
+
+
+	/*Profile page*/
+
+	.profile-main {
+		width: 100vw;
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+	.profile-info-div {
+		width: 100%;
+	}
+
+}

@@ -1,0 +1,40 @@
+User can create account, make and upload posts, can follow each others, can see the posts uploaded by the followers, can search for the accounts, can block the accounts, can save the posts, like the posts, comments on the posts, share the posts, can chat with each others 
+
+
+User : Register, login, make & upload posts, follows, comment, like, share, can get notification
+
+User Attributes :
+				first name, last name, email, phone_number, userid, password
+
+Posts: 
+		userid, post_id, contents, caption, likes, comments
+
+
+Tables 
+1: user : userid, username, first_name, last name, email, phone no, password, date_registred
+2: post : userid, postid, post_content, post_caption, date_posted
+3: likes : post_id, user_id, likes_count, 
+4: comments : post_id, user_id, comment_text
+5: shares : post_id, share_count
+6: stories : user_id, story_id
+7: followers : user_id, follower_id(user_id of the follower)
+8: following : user_id, follower_id(user_id pf the follwing)
+
+
+1> User:
++----------------+--------------+------+-----+-------------------+-----------------------------+                        | Field          | Type         | Null | Key | Default           | Extra                       |                        +----------------+--------------+------+-----+-------------------+-----------------------------+                        | user_id        | int(11)      | NO   | PRI | NULL              | auto_increment              |                        | mobile_number  | bigint(20)   | YES  | UNI | NULL              |                             |                        | email          | varchar(200) | YES  | UNI | NULL              |                             |                        | full_name      | varchar(200) | NO   |     | NULL              |                             |                        | username       | varchar(200) | NO   | UNI | NULL              |                             |                        | password       | varchar(200) | YES  | UNI | NULL              |                             |                        | date_registred | timestamp    | YES  |     | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |                        | profile_pic    | varchar(200) | YES  |     | NULL              |                             |                        +----------------+--------------+------+-----+-------------------+-----------------------------+  
+
+2> Post:
+
++------------------+--------------+------+-----+-------------------+-----------------------------+                      | Field            | Type         | Null | Key | Default           | Extra                       |                      +------------------+--------------+------+-----+-------------------+-----------------------------+                      | post_id          | int(11)      | NO   | PRI | NULL              | auto_increment              |                      | user_id          | int(11)      | YES  |     | NULL              |                             |                      | post_content_url | varchar(400) | NO   |     | NULL              |                             |                      | post_caption     | varchar(500) | YES  |     | NULL              |                             |                      | posted_time      | timestamp    | YES  |     | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |                      +------------------+--------------+------+-----+-------------------+-----------------------------+  
+
+3> likes : 
+
++------------+-----------+------+-----+-------------------+-----------------------------+                               | Field      | Type      | Null | Key | Default           | Extra                       |                               +------------+-----------+------+-----+-------------------+-----------------------------+                               | post_id    | int(11)   | YES  |     | NULL              |                             |                               | user_id    | int(11)   | YES  |     | NULL              |                             |                               | liked_time | timestamp | YES  |     | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |                               +------------+-----------+------+-----+-------------------+-----------------------------+  
+
+4> comments : 
++----------------+--------------+------+-----+-------------------+-----------------------------+                        | Field          | Type         | Null | Key | Default           | Extra                       |                        +----------------+--------------+------+-----+-------------------+-----------------------------+                        | post_id        | int(11)      | YES  |     | NULL              |                             |                        | user_id        | int(11)      | YES  |     | NULL              |                             |                        | comment_text   | varchar(200) | NO   |     | NULL              |                             |                        | commented_time | timestamp    | YES  |     | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |                        +----------------+--------------+------+-----+-------------------+-----------------------------+  
+
+
+
+ 
